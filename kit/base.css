@@ -1,0 +1,18 @@
+:root{--tb:#4DD3F0;--navy:#0B1626;--navy2:#13243D;--yel:#FFE14A;--red:#FF3B4E;--ink:#0B1626;--w:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+body{font-family:"Noto Sans CJK JP","Noto Sans JP",sans-serif;font-weight:900;color:#fff;line-height:1.15;
+  -webkit-font-smoothing:antialiased;font-feature-settings:"palt"}
+#stage{position:absolute;inset:0;overflow:hidden}
+section{position:absolute;inset:-40px;padding:40px;display:none;overflow:hidden}
+.abs{position:absolute;left:40px;width:1080px;text-align:center;white-space:nowrap;will-change:transform,opacity}
+.num{font-family:"Noto Sans CJK JP";font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.hazard{position:absolute;left:0;width:1160px;height:74px;
+  background:repeating-linear-gradient(-45deg,#0B1626 0 46px,#FFE14A 46px 92px)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(77,211,240,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(77,211,240,.07) 2px,transparent 2px);background-size:90px 90px}
+.glow{position:absolute;left:50%;top:44%;width:1500px;height:1500px;margin:-750px 0 0 -750px;border-radius:50%;
+  background:radial-gradient(circle,rgba(77,211,240,.30),rgba(77,211,240,0) 62%)}
+.pill{display:inline-block;padding:16px 44px;border-radius:999px;font-size:54px}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.note{font-weight:500;font-size:34px;opacity:.85}
+.handle{font-size:46px;font-weight:700;letter-spacing:.02em}

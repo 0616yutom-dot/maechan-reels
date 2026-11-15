@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+:root{--gold:#C6A45B;--gold2:#F3DFA0;--cream:#F1E8D0;--nv:#101C2D;--nv2:#273545}
+body{font-family:"Noto Serif CJK JP",serif;font-weight:900;color:var(--cream);line-height:1.3}
+#stage{background:var(--nv)}
+section{background:radial-gradient(ellipse at 50% 38%,#22354C 0%,#101C2D 62%,#0A121E 100%)}
+.g{background:linear-gradient(120deg,#F6E7AE 0%,#C6A45B 38%,#9A7B3F 55%,#F3DFA0 78%,#C6A45B 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sans{font-family:"Noto Sans CJK JP",sans-serif}
+.cap{font-family:"Noto Sans CJK JP",sans-serif;font-weight:500;letter-spacing:.42em;font-size:34px;color:var(--gold)}
+.rule{position:absolute;left:50%;height:2px;background:linear-gradient(90deg,transparent,#C6A45B 20%,#F3DFA0 50%,#C6A45B 80%,transparent)}
+.frameline{position:absolute;inset:86px 76px;border:2px solid rgba(198,164,91,.55);pointer-events:none}
+.frameline:after{content:"";position:absolute;inset:12px;border:1px solid rgba(198,164,91,.28)}
+.dots i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(243,223,160,.9),rgba(243,223,160,0) 70%)}
+/* 肖像（アーチ型の額） */
+.arch{position:absolute;left:200px;top:290px;width:760px;height:860px;padding:6px;border-radius:380px 380px 20px 20px;
+  background:linear-gradient(140deg,#F6E7AE,#C6A45B 40%,#8D7444 60%,#F3DFA0);box-shadow:0 40px 90px rgba(0,0,0,.55)}
+.arch .in{width:100%;height:100%;border-radius:374px 374px 15px 15px;overflow:hidden;position:relative;background:#222}
+.arch img{position:absolute;left:50%;top:50%;width:1000px;margin:-500px 0 0 -500px;transform-origin:50% 42%}
+.sweep{position:absolute;top:-10%;left:0;width:220px;height:120%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
+.av{position:absolute;width:230px;height:230px;border-radius:50%;padding:5px;background:linear-gradient(140deg,#F6E7AE,#C6A45B 45%,#8D7444);box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.av img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.say{position:absolute;background:var(--cream);color:var(--nv);font-family:"Noto Sans CJK JP",sans-serif;font-weight:900;font-size:50px;line-height:1.25;padding:22px 38px;border-radius:40px;white-space:nowrap;box-shadow:0 14px 34px rgba(0,0,0,.4);transform-origin:0% 100%}
+.say:after{content:"";position:absolute;left:-18px;bottom:26px;border:16px solid transparent;border-right-color:var(--cream);border-left:0}
+
+#bgim{position:absolute;inset:-60px;background:url(c/bg.jpg) center/cover}
+#vig{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,28,45,.55) 0%,rgba(16,28,45,.05) 30%,rgba(16,28,45,.25) 55%,rgba(10,18,30,.93) 78%)}
+.when{display:inline-block;font-family:"Noto Sans CJK JP";font-weight:700;font-size:44px;letter-spacing:.2em;color:var(--nv);padding:10px 44px 10px 52px;background:linear-gradient(120deg,#F6E7AE,#C6A45B 60%,#F3DFA0)}
+.no{top:470px;font-size:250px;line-height:1;font-weight:700;letter-spacing:.02em}
+.ttl{top:800px;font-size:104px;line-height:1.32}
+.why{top:1100px;font-family:"Noto Sans CJK JP";font-weight:500;font-size:50px;line-height:1.5;color:#D9D2BF}
+.pips{position:absolute;left:390px;top:300px;width:300px;display:flex;gap:18px}
+.pips i{flex:1;height:4px;background:rgba(198,164,91,.28);position:relative}.pips i b{position:absolute;inset:0;right:auto;background:var(--gold2);width:0}
+#s8{background:radial-gradient(ellipse at 50% 35%,#FBF5E3,#F1E8D0 60%,#E3D6B4);color:var(--nv)}
+#s8 .frameline{border-color:rgba(141,116,68,.6)}#s8 .frameline:after{border-color:rgba(141,116,68,.3)}
+.bubble{position:absolute;left:170px;top:1030px;width:820px;height:170px;border-radius:85px;background:#fff;border:2px solid var(--gold);box-shadow:0 18px 40px rgba(60,45,10,.22);text-align:left;padding:0 64px;font-family:"Noto Sans CJK JP";font-size:96px;line-height:166px;color:var(--nv)}
+.send{position:absolute;right:20px;top:19px;width:128px;height:128px;border-radius:50%;background:var(--nv)}
+.caret{display:inline-block;width:6px;height:96px;background:var(--gold);vertical-align:-16px;margin-left:8px}
+
+.photo{background:#111}
+.photo img.full{position:absolute;left:10px;top:0;width:1140px;height:2000px;transform-origin:50% 45%}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,30,.45) 0%,rgba(10,18,30,0) 22%,rgba(10,18,30,.08) 46%,rgba(10,18,30,.70) 62%,rgba(10,18,30,.84) 100%)}
+.ts{text-shadow:0 0 16px rgba(5,10,18,.95),0 4px 34px rgba(5,10,18,.9)}
+.ts .g{text-shadow:none;filter:drop-shadow(0 0 9px rgba(5,10,18,.95)) drop-shadow(0 3px 14px rgba(5,10,18,.8))}
+.fx{font-family:"Noto Serif CJK JP";font-weight:700}
+.li{position:absolute;left:150px;width:860px;text-align:left;display:flex;align-items:center;gap:34px;border-bottom:1px solid rgba(198,164,91,.35);padding-bottom:26px}
+.li .n{font-size:96px;font-weight:700;line-height:1}.li .x{font-size:58px;line-height:1.3}
+.yrs{position:absolute;left:171px;top:1085px;width:818px;display:flex;gap:10px}
+.yrs i{flex:1;height:26px;border:1px solid rgba(198,164,91,.5);position:relative}.yrs i b{position:absolute;inset:0;background:linear-gradient(120deg,#F6E7AE,#C6A45B);opacity:0}
+.fam{position:absolute;left:115px;top:300px;width:930px;display:flex;justify-content:space-between}
+.fam .av{position:relative;width:170px;height:170px}
+</style></head><body><div id="stage">
+<section class="photo" id="s1" data-a="0" data-b="1.3">
+  <img class="full" id="i1" src="d/rain.jpg"><div class="shade"></div>
+  <div class="abs ts" id="a1" style="top:1090px;font-size:92px">家を買う人、</div>
+  <div class="abs ts" id="a2" style="top:1215px;font-size:142px;line-height:1.1">知らないと<span class="g">損</span>。</div>
+</section>
+<section class="photo" id="s1b" data-a="1.3" data-b="3.7">
+  <img class="full" id="i2" src="d/sun.jpg"><div class="shade"></div><div class="dots" id="d1"></div>
+  <div class="abs ts" id="b1" style="top:1060px;font-size:84px">払った税金が、戻ってくる</div>
+  <div class="abs ts fx" id="b2" style="top:1170px;font-size:230px;line-height:1.05"><span style="font-size:96px;font-weight:900;color:#F1E8D0">最大</span><span class="g" id="cnt">0</span><span style="font-size:104px;font-weight:900">万円</span></div>
+  <div class="abs sans ts" id="b3" style="top:1440px;font-size:32px;font-weight:500;color:#D9D2BF">※2026年入居・長期優良住宅などの新築・子育て世帯で13年間の上限額</div>
+</section>
+<section class="photo" id="s2" data-a="3.7" data-b="6.7">
+  <img class="full" id="i3" src="d/think.jpg"><div class="shade"></div>
+  <div class="say" id="say2" style="left:170px;top:300px;font-size:54px">パパ、住宅ローン控除って<br>なに？</div>
+  <div class="abs cap ts" id="c1" style="top:1110px">WHAT IS IT ?</div>
+  <div class="abs ts" id="c2" style="top:1180px;font-size:128px"><span class="g">住宅ローン控除</span></div>
+  <div class="abs ts" id="c3" style="top:1370px;font-size:54px;color:#E9E2CF">家を買った人の税金が安くなる制度</div>
+</section>
+<section id="s3" data-a="6.7" data-b="11.1">
+  <div class="frameline"></div><div class="dots" id="d3"></div>
+  <div class="av" id="av3" style="left:150px;top:300px;width:190px;height:190px"><img src="d/papa.jpg"></div>
+  <div class="say" id="say3" style="left:380px;top:335px;font-size:50px">計算はこれだけ</div>
+  <div class="abs" id="e1" style="top:560px;font-size:84px">年末のローン残高</div>
+  <div class="abs fx" id="e2" style="top:680px;font-size:220px;line-height:1.1"><span style="font-size:120px;color:#F1E8D0">× </span><span class="g">0.7%</span></div>
+  <div class="abs" id="e3" style="top:950px;font-size:62px;color:#D9D2BF">が毎年、税金から戻る</div>
+  <div class="rule" id="e4" style="top:1080px;width:0"></div>
+  <div class="abs sans" id="e5" style="top:1120px;font-size:50px;font-weight:700">たとえば残高 3,000万円なら</div>
+  <div class="abs fx" id="e6" style="top:1200px;font-size:170px;line-height:1.1"><span style="font-size:70px;font-weight:900;color:#F1E8D0">その年 </span><span class="g" id="cnt2">0</span><span style="font-size:84px;font-weight:900">万円</span></div>
+</section>
+<section id="s4" data-a="11.1" data-b="14.7">
+  <div class="frameline"></div><div class="dots" id="d4"></div>
+  <div class="abs" id="f1" style="top:400px;font-size:92px">しかも、これが</div>
+  <div class="abs fx" id="f2" style="top:500px;font-size:480px;line-height:1.1"><span style="font-size:110px;font-weight:900;color:#F1E8D0">最長</span><span class="g" id="cnt3">1</span><span style="font-size:150px;font-weight:900">年</span></div>
+  <div class="yrs" id="yrs"></div>
+  <div class="abs sans" id="f3" style="top:1150px;font-size:38px;font-weight:500;color:#D9D2BF;line-height:1.6">新築・省エネ性能の高い中古の場合<br>（それ以外の中古は10年）</div>
+  <div class="av" id="av4" style="left:150px;top:1300px;width:190px;height:190px"><img src="d/mama.jpg"></div>
+  <div class="say" id="say4" style="left:380px;top:1335px;font-size:50px">13年も続くの！？</div>
+</section>
+<section class="photo" id="s5" data-a="14.7" data-b="18.7">
+  <img class="full" id="i5" src="d/home.jpg"><div class="shade"></div>
+  <div class="abs" id="g0" style="top:1020px"><span class="when">2026年の改正ポイント</span></div>
+  <div class="abs ts" id="g1" style="top:1120px;font-size:118px">中古でも<span class="g">13年</span>に</div>
+  <div class="abs ts" id="g2" style="top:1290px;font-size:66px">期限も<span class="g">2030年入居</span>まで延長</div>
+  <div class="abs sans ts" id="g3" style="top:1410px;font-size:34px;font-weight:500;color:#D9D2BF">※13年は省エネ基準を満たす中古住宅が対象</div>
+</section>
+<section id="s6" data-a="18.7" data-b="22.9">
+  <div class="frameline"></div>
+  <div class="abs cap" id="h0" style="top:330px">CHECK POINT</div>
+  <div class="abs" id="h1" style="top:400px;font-size:100px">注意点は<span class="g">3つ</span></div>
+  <div class="li" id="l1" style="top:600px"><span class="n g">01</span><span class="x">戻るのは<br>「納めた税金」まで</span></div>
+  <div class="li" id="l2" style="top:810px"><span class="n g">02</span><span class="x">家の省エネ性能で<br>上限が変わる</span></div>
+  <div class="li" id="l3" style="top:1020px"><span class="n g">03</span><span class="x">1年目は<br>確定申告が必要</span></div>
+  <div class="av" id="av6" style="left:150px;top:1290px;width:190px;height:190px"><img src="d/baby.jpg"></div>
+  <div class="say" id="say6" style="left:380px;top:1325px;font-size:50px">ここ大事！</div>
+</section>
+<section class="photo" id="s7" data-a="22.9" data-b="24.9">
+  <img class="full" id="i7" src="d/sakura.jpg"><div class="shade"></div><div class="dots" id="d7"></div>
+  <div class="abs ts" id="j1" style="top:1090px;font-size:180px;line-height:1.1"><span class="g">保存</span>して</div>
+  <div class="abs ts" id="j2" style="top:1330px;font-size:70px">家探しの前に、もう一度見て</div>
+</section>
+<section id="s8" data-a="24.9" data-b="29.0">
+  <div class="frameline"></div>
+  <div class="fam" id="fam"><div class="av"><img src="d/papa.jpg"></div><div class="av"><img src="d/mama.jpg"></div><div class="av"><img src="d/ani.jpg"></div><div class="av"><img src="d/baby.jpg"></div><div class="av"><img src="d/neko.jpg"></div></div>
+  <div class="abs cap" id="c8c" style="top:560px;color:#8D7444;letter-spacing:.2em">宅建士・住宅ローンアドバイザーが無料で試算</div>
+  <div class="abs" id="c8a" style="top:650px;font-size:104px;line-height:1.3">わが家は<br>いくら戻る？</div>
+  <div class="abs sans" id="c8b" style="top:950px;font-size:48px;font-weight:700;color:#5A4A28">DMにこの2文字を送るだけ</div>
+  <div class="bubble" id="bub"><span id="tw"></span><span class="caret" id="car"></span><div class="send"><svg viewBox="0 0 100 100" width="128" height="128"><path d="M50 72 V30 M32 46 L50 28 L68 46" stroke="#F3DFA0" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+  <div class="abs sans" id="c8h" style="top:1270px;font-size:46px;font-weight:700;line-height:1.5">@maechan_0616<br><span style="font-size:36px;font-weight:500">フォローで「家づくりで損しない知識」が届く</span></div>
+</section>
+</div><script src="lib.js"></script><script>
+const DUR=29.0;
+['d1','d3','d4','d7'].forEach(id=>{const h=$(id);for(let i=0;i<16;i++)h.appendChild(document.createElement('i'));});
+for(let i=0;i<13;i++){const e=document.createElement('i');e.appendChild(document.createElement('b'));$('yrs').appendChild(e);}
+function dots(id,t){$(id).querySelectorAll('i').forEach((el,i)=>{const r=n=>{const x=Math.sin((i+1)*n*12.9898)*43758.5453;return x-Math.floor(x)};
+ const sz=18+r(1)*70,sp=18+r(2)*40;const y=((1900-(t*sp+r(3)*2000))%2100+2100)%2100-100;
+ el.style.width=el.style.height=sz+'px';el.style.left=(r(4)*1160)+'px';el.style.top=y+'px';el.style.opacity=0.12+0.3*r(5)*(0.6+0.4*Math.sin(t*1.5+i));});}
+function pop(el,t,t0){if(typeof el==='string')el=$(el);const p=eOutBack(prog(t,t0,t0+0.35));el.style.opacity=t<t0?0:prog(t,t0,t0+0.1);el.style.transform=`scale(${p})`;}
+function kb(id,t,a,z0,z1,dur,dy=0){$(id).style.transform=`scale(${z0+(z1-z0)*prog(t,a,a+dur)}) translateY(${dy}px)`;}
+function render(t){
+ const sc=scenes(t);if(!sc)return;let sx=0,sy=0;const a=+sc.dataset.a;
+ if(sc.id!=='s1'&&sc.id!=='s1b')sc.style.opacity=prog(t,a,a+0.28);
+ if(sc.id==='s1'){kb('i1',t,0,1.12,1.02,1.3);const p=eOutExpo(prog(t,0,0.4));
+  $('a1').style.opacity=1;$('a2').style.opacity=1;$('a2').style.transform=`scale(${1.1-0.1*p})`;
+  [sx,sy]=shakeXY(t,0,0.28,10);}
+ if(sc.id==='s1b'){dots('d1',t);kb('i2',t,1.3,1.0,1.1,2.4);
+  enter('b1',t,1.35,{y:40,dur:0.35,fade:0.15});
+  const cp=prog(t,1.5,2.5);$('cnt').textContent=Math.round(455*(1-Math.pow(1-cp,2.4)));
+  const pu=eOutExpo(prog(t,2.5,2.85));$('b2').style.opacity=prog(t,1.45,1.6);$('b2').style.transform=`scale(${t<2.5?0.92+0.08*cp:1.1-0.1*pu})`;
+  enter('b3',t,2.7,{y:20,dur:0.35,fade:0.25});
+  [sx,sy]=shakeXY(t,1.3,0.25,10);const q=shakeXY(t,2.5,0.4,16);sx+=q[0];sy+=q[1];}
+ if(sc.id==='s2'){kb('i3',t,a,1.0,1.08,3);pop('say2',t,4.0);
+  enter('c1',t,4.5,{y:-20,dur:0.4});enter('c2',t,4.6,{s:1.3,blur:16,dur:0.4,fade:0.12});enter('c3',t,5.1,{y:30,dur:0.4,fade:0.25});
+  [sx,sy]=shakeXY(t,4.8,0.25,8);}
+ if(sc.id==='s3'){dots('d3',t);pop('av3',t,6.85);pop('say3',t,7.05);
+  enter('e1',t,7.2,{y:40,dur:0.4,fade:0.25});enter('e2',t,7.6,{s:1.6,blur:18,dur:0.4,fade:0.12});enter('e3',t,8.2,{y:30,dur:0.4,fade:0.25});
+  const rp=eInOut(prog(t,8.7,9.2));$('e4').style.width=(560*rp)+'px';$('e4').style.marginLeft=(-280*rp)+'px';
+  enter('e5',t,8.9,{y:30,dur:0.4,fade:0.25});
+  const cp=prog(t,9.3,10.0);$('cnt2').textContent=Math.round(21*(1-Math.pow(1-cp,2)));
+  $('e6').style.opacity=prog(t,9.25,9.4);const pu=eOutExpo(prog(t,10.0,10.3));$('e6').style.transform=`scale(${t<10?1:1.1-0.1*pu})`;
+  [sx,sy]=shakeXY(t,7.8,0.25,9);const q=shakeXY(t,10.0,0.3,12);sx+=q[0];sy+=q[1];}
+ if(sc.id==='s4'){dots('d4',t);enter('f1',t,11.2,{y:-30,dur:0.4,fade:0.25});
+  const cp=prog(t,11.6,12.9);const k=Math.max(1,Math.min(13,Math.floor(1+cp*13)));$('cnt3').textContent=cp>=1?13:k;
+  $('f2').style.opacity=prog(t,11.5,11.65);const pu=eOutExpo(prog(t,12.9,13.2));$('f2').style.transform=`scale(${t<12.9?1:1.1-0.1*pu})`;
+  $('yrs').querySelectorAll('b').forEach((b,i)=>{b.style.opacity=prog(t,11.6+i*0.1,11.68+i*0.1)});
+  $('yrs').style.opacity=prog(t,11.5,11.7);
+  enter('f3',t,13.1,{y:20,dur:0.4,fade:0.25});pop('av4',t,13.3);pop('say4',t,13.5);
+  [sx,sy]=shakeXY(t,12.9,0.35,14);}
+ if(sc.id==='s5'){kb('i5',t,a,1.08,1.0,4);enter('g0',t,14.95,{y:-30,dur:0.4});
+  enter('g1',t,15.2,{s:1.4,blur:16,dur:0.4,fade:0.12});enter('g2',t,16.4,{y:40,dur:0.4,fade:0.25});enter('g3',t,17.0,{y:20,dur:0.4,fade:0.25});
+  [sx,sy]=shakeXY(t,15.4,0.28,10);}
+ if(sc.id==='s6'){enter('h0',t,18.8,{y:-20,dur:0.4});enter('h1',t,18.9,{s:1.25,blur:14,dur:0.4,fade:0.12});
+  ['l1','l2','l3'].forEach((id,i)=>enter(id,t,19.5+i*0.75,{x:140,dur:0.45,fade:0.2}));
+  pop('av6',t,21.7);pop('say6',t,21.9);}
+ if(sc.id==='s7'){dots('d7',t);kb('i7',t,a,1.0,1.07,2);
+  enter('j1',t,23.05,{s:1.6,blur:16,dur:0.35,fade:0.1});enter('j2',t,23.6,{y:40,dur:0.4,fade:0.25});
+  [sx,sy]=shakeXY(t,23.25,0.3,10);}
+ if(sc.id==='s8'){$('fam').querySelectorAll('.av').forEach((el,i)=>pop(el,t,25.0+i*0.1));
+  enter('c8c',t,25.5,{y:-20,dur:0.4});enter('c8a',t,25.6,{blur:18,s:1.08,dur:0.5,fade:0.25});
+  enter('c8b',t,26.3,{y:30,dur:0.4,fade:0.25});enter('bub',t,26.5,{s:0.4,dur:0.45,ease:eOutBack});
+  typewriter('tw','控除',t,27.0,3.2);$('car').style.opacity=(Math.floor(t*3)%2)?1:0.15;
+  enter('c8h',t,27.7,{y:50,dur:0.4,fade:0.25});}
+ sc.style.transform=`translate(${sx}px,${sy}px)`;
+}
+render(0);
+</script></body></html>

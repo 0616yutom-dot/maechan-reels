@@ -1,0 +1,8 @@
+kit/*_seg*.mp4
+kit/*_silent.mp4
+kit/*.wav
+kit/*_list.txt
+kit/chk*
+kit/new*
+__pycache__/
+*.tmp.mp4

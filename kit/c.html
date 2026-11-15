@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+:root{--gold:#C6A45B;--gold2:#F3DFA0;--cream:#F1E8D0;--nv:#101C2D;--nv2:#273545}
+body{font-family:"Noto Serif CJK JP",serif;font-weight:900;color:var(--cream);line-height:1.3}
+#stage{background:var(--nv)}
+section{background:radial-gradient(ellipse at 50% 38%,#22354C 0%,#101C2D 62%,#0A121E 100%)}
+.g{background:linear-gradient(120deg,#F6E7AE 0%,#C6A45B 38%,#9A7B3F 55%,#F3DFA0 78%,#C6A45B 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sans{font-family:"Noto Sans CJK JP",sans-serif}
+.cap{font-family:"Noto Sans CJK JP",sans-serif;font-weight:500;letter-spacing:.42em;font-size:34px;color:var(--gold)}
+.rule{position:absolute;left:50%;height:2px;background:linear-gradient(90deg,transparent,#C6A45B 20%,#F3DFA0 50%,#C6A45B 80%,transparent)}
+.frameline{position:absolute;inset:86px 76px;border:2px solid rgba(198,164,91,.55);pointer-events:none}
+.frameline:after{content:"";position:absolute;inset:12px;border:1px solid rgba(198,164,91,.28)}
+.dots i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(243,223,160,.9),rgba(243,223,160,0) 70%)}
+/* 肖像（アーチ型の額） */
+.arch{position:absolute;left:200px;top:290px;width:760px;height:860px;padding:6px;border-radius:380px 380px 20px 20px;
+  background:linear-gradient(140deg,#F6E7AE,#C6A45B 40%,#8D7444 60%,#F3DFA0);box-shadow:0 40px 90px rgba(0,0,0,.55)}
+.arch .in{width:100%;height:100%;border-radius:374px 374px 15px 15px;overflow:hidden;position:relative;background:#222}
+.arch img{position:absolute;left:50%;top:50%;width:1000px;margin:-500px 0 0 -500px;transform-origin:50% 42%}
+.sweep{position:absolute;top:-10%;left:0;width:220px;height:120%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
+.av{position:absolute;width:230px;height:230px;border-radius:50%;padding:5px;background:linear-gradient(140deg,#F6E7AE,#C6A45B 45%,#8D7444);box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.av img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.say{position:absolute;background:var(--cream);color:var(--nv);font-family:"Noto Sans CJK JP",sans-serif;font-weight:900;font-size:50px;line-height:1.25;padding:22px 38px;border-radius:40px;white-space:nowrap;box-shadow:0 14px 34px rgba(0,0,0,.4);transform-origin:0% 100%}
+.say:after{content:"";position:absolute;left:-18px;bottom:26px;border:16px solid transparent;border-right-color:var(--cream);border-left:0}
+#s1{background:#1a1410}
+#bgim{position:absolute;inset:-60px;background:url(c/bg.jpg) center/cover}
+#vig{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,28,45,.55) 0%,rgba(16,28,45,.05) 30%,rgba(16,28,45,.25) 55%,rgba(10,18,30,.93) 78%)}
+.when{display:inline-block;font-family:"Noto Sans CJK JP";font-weight:700;font-size:44px;letter-spacing:.2em;color:var(--nv);padding:10px 44px 10px 52px;background:linear-gradient(120deg,#F6E7AE,#C6A45B 60%,#F3DFA0)}
+.no{top:470px;font-size:250px;line-height:1;font-weight:700;letter-spacing:.02em}
+.ttl{top:800px;font-size:104px;line-height:1.32}
+.why{top:1100px;font-family:"Noto Sans CJK JP";font-weight:500;font-size:50px;line-height:1.5;color:#D9D2BF}
+.pips{position:absolute;left:390px;top:300px;width:300px;display:flex;gap:18px}
+.pips i{flex:1;height:4px;background:rgba(198,164,91,.28);position:relative}.pips i b{position:absolute;inset:0;right:auto;background:var(--gold2);width:0}
+#s8{background:radial-gradient(ellipse at 50% 35%,#FBF5E3,#F1E8D0 60%,#E3D6B4);color:var(--nv)}
+#s8 .frameline{border-color:rgba(141,116,68,.6)}#s8 .frameline:after{border-color:rgba(141,116,68,.3)}
+.bubble{position:absolute;left:170px;top:1030px;width:820px;height:170px;border-radius:85px;background:#fff;border:2px solid var(--gold);box-shadow:0 18px 40px rgba(60,45,10,.22);text-align:left;padding:0 64px;font-family:"Noto Sans CJK JP";font-size:96px;line-height:166px;color:var(--nv)}
+.send{position:absolute;right:20px;top:19px;width:128px;height:128px;border-radius:50%;background:var(--nv)}
+.caret{display:inline-block;width:6px;height:96px;background:var(--gold);vertical-align:-16px;margin-left:8px}
+</style></head><body><div id="stage">
+
+<!-- 1 フック：この子の顔で止める -->
+<section id="s1" data-a="0" data-b="2.4">
+  <div id="bgim"></div><div id="vig"></div>
+  <div class="dots" id="d1"></div>
+  <div class="arch" id="arch"><div class="in"><img id="him" src="c/hero.jpg"><div class="sweep" id="sw"></div></div></div>
+  <div class="say" id="say1" style="left:560px;top:300px">ぼく、走りたい<br>だけなのに…</div>
+  <div class="abs" id="c1a" style="top:1135px;font-size:116px;line-height:1.1;text-shadow:0 6px 30px rgba(0,0,0,.6)">「静かにして！」</div>
+  <div class="abs" id="c1b" style="top:1300px;font-size:70px"><span class="g">今日、何回言いましたか？</span></div>
+</section>
+
+<!-- 2 悩み -->
+<section id="s2" data-a="2.4" data-b="5.6">
+  <div class="frameline"></div><div class="dots" id="d2"></div>
+  <div class="abs cap" id="c2c" style="top:420px">賃貸の子育て</div>
+  <div class="abs" id="c2a" style="top:530px;font-size:92px">足音・泣き声で<br>下の階に気をつかう毎日</div>
+  <div class="rule" id="c2r" style="top:830px;width:0;margin-left:0"></div>
+  <div class="abs" id="c2b" style="top:900px;font-size:76px;color:#D9D2BF">それ、子どものせいじゃない。</div>
+  <div class="abs" id="c2d" style="top:1040px;font-size:124px"><span class="g">「家」のせい</span>です</div>
+</section>
+
+<!-- 3 解決策は3つ -->
+<section id="s3" data-a="5.6" data-b="7.4">
+  <div class="frameline"></div><div class="dots" id="d3"></div>
+  <div class="abs cap" id="c3c" style="top:440px">SOLUTION</div>
+  <div class="abs" id="c3a" style="top:520px;font-size:96px">解決策は</div>
+  <div class="abs" id="c3b" style="top:600px;font-size:520px;line-height:1.1;font-weight:700"><span class="g">3</span><span style="font-size:150px;font-weight:900">つ</span></div>
+  <div class="av" id="av3" style="left:150px;top:1230px"><img src="c/face.jpg"></div>
+  <div class="say" id="say3" style="left:420px;top:1260px">こうすれば<br>解決じゃね？</div>
+</section>
+
+<section class="pt" id="p1" data-a="7.4" data-b="10.7">
+  <div class="frameline"></div><div class="pips"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+  <div class="abs wh" style="top:360px"><span class="when">今すぐできる</span></div>
+  <div class="abs no"><span class="g">01</span></div>
+  <div class="abs ttl">厚めの<br>防音マットを敷く</div>
+  <div class="abs why">足音をやわらげる、いちばん手軽な方法。<br>まずは今日からできる対策</div>
+  <div class="av" style="left:150px;top:1290px;width:190px;height:190px"><img src="c/face.jpg"></div>
+  <div class="say" style="left:380px;top:1320px;font-size:46px">これならすぐ！</div>
+</section>
+<section class="pt" id="p2" data-a="10.7" data-b="14.0">
+  <div class="frameline"></div><div class="pips"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+  <div class="abs wh" style="top:360px"><span class="when">次の更新のとき</span></div>
+  <div class="abs no"><span class="g">02</span></div>
+  <div class="abs ttl">1階・角部屋へ<br>住み替える</div>
+  <div class="abs why">下や隣に人がいなければ、<br>気をつかう相手そのものが減る</div>
+  <div class="av" style="left:150px;top:1290px;width:190px;height:190px"><img src="c/face.jpg"></div>
+  <div class="say" style="left:380px;top:1320px;font-size:46px">引っ越しもアリ</div>
+</section>
+<section class="pt" id="p3" data-a="14.0" data-b="17.5">
+  <div class="frameline"></div><div class="pips"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+  <div class="abs wh" style="top:360px"><span class="when">根本から解決</span></div>
+  <div class="abs no"><span class="g">03</span></div>
+  <div class="abs ttl">戸建ての<br><span class="g">マイホーム</span></div>
+  <div class="abs why">上下に他人が住んでいない家。<br>「静かにして」を言う回数が変わる</div>
+  <div class="av" style="left:150px;top:1290px;width:190px;height:190px"><img src="c/face.jpg"></div>
+  <div class="say" style="left:380px;top:1320px;font-size:46px">ぼくはコレがいい！</div>
+</section>
+
+<!-- 7 保存 -->
+<section id="s7" data-a="17.5" data-b="19.7">
+  <div class="frameline"></div><div class="dots" id="d7"></div>
+  <svg class="abs" id="c7i" style="top:430px;height:300px" viewBox="0 0 1080 300"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E7AE"/><stop offset=".5" stop-color="#C6A45B"/><stop offset="1" stop-color="#F3DFA0"/></linearGradient></defs><path d="M470 14 H610 V280 L540 226 L470 280 Z" fill="url(#gg)"/></svg>
+  <div class="abs" id="c7a" style="top:800px;font-size:190px;line-height:1.1"><span class="g">保存</span>して</div>
+  <div class="abs" id="c7b" style="top:1050px;font-size:84px">今夜、夫婦で話してみて</div>
+</section>
+
+<!-- 8 行動 -->
+<section id="s8" data-a="19.7" data-b="23.6">
+  <div class="frameline"></div>
+  <div class="av" id="av8" style="left:425px;top:300px"><img src="c/face.jpg"></div>
+  <div class="abs cap" id="c8c" style="top:580px;color:#8D7444">宅建士が無料で試算</div>
+  <div class="abs" id="c8a" style="top:660px;font-size:86px;line-height:1.35">今の家賃と同じくらいで<br>マイホーム、買える？</div>
+  <div class="abs sans" id="c8b" style="top:940px;font-size:48px;font-weight:700;color:#5A4A28">DMにこの2文字を送るだけ</div>
+  <div class="bubble" id="bub"><span id="tw"></span><span class="caret" id="car"></span><div class="send"><svg viewBox="0 0 100 100" width="128" height="128"><path d="M50 72 V30 M32 46 L50 28 L68 46" stroke="#F3DFA0" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+  <div class="abs sans" id="c8h" style="top:1270px;font-size:46px;font-weight:700;line-height:1.5">@maechan_0616<br><span style="font-size:36px;font-weight:500">フォローで「家づくりで損しない知識」が届く</span></div>
+</section>
+
+</div><script src="lib.js"></script><script>
+const DUR = 23.6;
+// 金色の光のつぶ（ゆっくり上へ）
+['d1','d2','d3','d7'].forEach(id=>{ const h=$(id); for(let i=0;i<16;i++){ h.appendChild(document.createElement('i')); } });
+function dots(id,t){ $(id).querySelectorAll('i').forEach((el,i)=>{ const r=(n)=>{const x=Math.sin((i+1)*n*12.9898)*43758.5453; return x-Math.floor(x)};
+  const sz=18+r(1)*70, sp=18+r(2)*40; const y=((1900-(t*sp+r(3)*2000))%2100+2100)%2100-100;
+  el.style.width=el.style.height=sz+'px'; el.style.left=(r(4)*1160)+'px'; el.style.top=y+'px'; el.style.opacity=0.12+0.3*r(5)*(0.6+0.4*Math.sin(t*1.5+i)); }); }
+function fadeIn(sc,t,d=0.35){ sc.style.opacity=prog(t,+sc.dataset.a,+sc.dataset.a+d); }
+function pop(el,t,t0){ const p=eOutBack(prog(t,t0,t0+0.35)); el.style.opacity=t<t0?0:prog(t,t0,t0+0.1); el.style.transform=`scale(${p})`; }
+function render(t){
+  const sc = scenes(t); if(!sc) return;
+  let sx=0, sy=0;
+  if(sc.id==='s1'){
+    dots('d1',t);
+    $('bgim').style.transform=`scale(${1.05+0.03*t})`;
+    // カット1：全体 → カット2(1.15秒)：顔に寄る
+    const z = t<1.15 ? 1.0+0.05*t : 1.42+0.04*(t-1.15);
+    $('him').style.transform=`scale(${z}) translateY(${t<1.15?0:26}px)`;
+    const ap=eOutExpo(prog(t,0,0.5)); $('arch').style.transform=`scale(${1.06-0.06*ap})`;
+    $('sw').style.left=(-300+1400*prog(t,0.15,0.85))+'px';
+    $('c1a').style.opacity=1; $('c1a').style.transform=`scale(${1.07-0.07*ap})`;
+    enter('c1b',t,0.35,{y:40,dur:0.4});
+    pop($('say1'),t,1.2);
+    [sx,sy]=shakeXY(t,0,0.28,10); const q=shakeXY(t,1.15,0.25,9); sx+=q[0]; sy+=q[1];
+  } else if(sc.id!=='s8'||true){ fadeIn(sc,t,0.3); }
+  if(sc.id==='s2'){
+    dots('d2',t);
+    enter('c2c',t,2.5,{y:-30,dur:0.5});
+    enter('c2a',t,2.65,{blur:22,s:1.08,dur:0.6,fade:0.3});
+    const rp=eInOut(prog(t,3.5,4.1)); $('c2r').style.width=(520*rp)+'px'; $('c2r').style.marginLeft=(-260*rp)+'px';
+    enter('c2b',t,3.7,{y:40,dur:0.5,fade:0.3});
+    enter('c2d',t,4.4,{s:1.5,dur:0.4,blur:14,fade:0.12});
+    [sx,sy]=shakeXY(t,4.6,0.3,10);
+  }
+  if(sc.id==='s3'){
+    dots('d3',t);
+    enter('c3c',t,5.7,{y:-30,dur:0.4}); enter('c3a',t,5.75,{y:40,dur:0.4,fade:0.25});
+    enter('c3b',t,5.95,{s:1.9,dur:0.4,blur:20,fade:0.12});
+    pop($('av3'),t,6.3); pop($('say3'),t,6.5);
+    [sx,sy]=shakeXY(t,6.15,0.3,10);
+  }
+  if(sc.classList.contains('pt')){
+    const a=+sc.dataset.a,b=+sc.dataset.b,idx=+sc.id.slice(1);
+    sc.querySelectorAll('.pips i b').forEach((el,i)=>{ el.style.width=i<idx-1?'100%':i===idx-1?(100*prog(t,a,b))+'%':'0'; });
+    enter(sc.querySelector('.wh'),t,a+0.1,{y:-40,dur:0.4});
+    enter(sc.querySelector('.no'),t,a+0.2,{x:160,dur:0.6,blur:16,fade:0.25});
+    enter(sc.querySelector('.ttl'),t,a+0.45,{s:1.25,dur:0.4,blur:14,fade:0.12});
+    enter(sc.querySelector('.why'),t,a+0.95,{y:40,dur:0.45,fade:0.3});
+    pop(sc.querySelector('.av'),t,a+1.3); pop(sc.querySelector('.say'),t,a+1.5);
+    [sx,sy]=shakeXY(t,a+0.62,0.25,8);
+  }
+  if(sc.id==='s7'){
+    dots('d7',t);
+    enter('c7i',t,17.6,{y:-200,dur:0.55,ease:eOutBack,fade:0.2});
+    enter('c7a',t,17.85,{s:1.7,dur:0.35,blur:16,fade:0.1});
+    enter('c7b',t,18.4,{y:40,dur:0.45,fade:0.3});
+    [sx,sy]=shakeXY(t,18.05,0.3,10);
+  }
+  if(sc.id==='s8'){
+    pop($('av8'),t,19.8);
+    enter('c8c',t,19.95,{y:-30,dur:0.4}); enter('c8a',t,20.05,{blur:18,s:1.08,dur:0.5,fade:0.25});
+    enter('c8b',t,20.8,{y:30,dur:0.4,fade:0.25});
+    enter('bub',t,21.0,{s:0.4,dur:0.45,ease:eOutBack});
+    typewriter('tw','試算',t,21.5,3.2); $('car').style.opacity=(Math.floor(t*3)%2)?1:0.15;
+    enter('c8h',t,22.2,{y:50,dur:0.4,fade:0.25});
+  }
+  sc.style.transform=`translate(${sx}px,${sy}px)`;
+}
+render(0);
+</script></body></html>
