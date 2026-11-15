@@ -9,6 +9,33 @@
 - 動画の公開URL：`https://raw.githubusercontent.com/0616yutom-dot/maechan-reels/main/videos/<ファイル名>.mp4`
   （だめなら `https://cdn.jsdelivr.net/gh/0616yutom-dot/maechan-reels@main/videos/<ファイル名>.mp4`）
 
+## ★2026/11/15 夜の方針変更（BOSS指示。ここが最優先）
+- **アニメーション中心 → 「家の写真」中心に変更**。BOSSの自宅（吹き抜け・屋上つきの注文住宅）の写真が `kit/h/` にある。動画は写真を全面に出し、ゆっくり動かして（ズーム・横流し）、文字を重ねる。
+- **見本は `kit/h.html` と `kit/audio_h.py`**（「吹き抜けは、やめとけ…って本当？」26秒）。新しい動画はこれを写して作る。`<section>` を並べるだけの仕組み：
+  - `data-a` / `data-b`＝表示する秒、`data-z="1.0,1.08"`＝ゆっくりズーム、`data-pan="-1500,-900"`＝横長写真（`pan_` で始まるファイル。高さ2000px）を横に流す（値は左位置px。写真の幅−1080 を超えない範囲で）。
+  - 文字は `<div class="t" data-in="秒">`。`data-in="0"` は最初から表示（冒頭用）。`class="dark"` を section に付けると写真全体を暗くして文字を主役にできる（まとめ・箇条書き用）。
+  - 場面は0.4秒で重なって切り替わるので、撮るときの境界は 3〜6秒ごとにまとめてよい（例 `0,3.8,9.6,14.8,20.0,26.0`）。
+- 家族イラスト（`kit/d/`）と `d.html` `c.html` は「たまに使う素材」。基本は写真。顔アイコンの吹き出しを1か所入れる程度は可。
+- **音は毎回ネタの雰囲気に合わせて作り分ける**（BOSSが選択）。`audio_h.py` の和音 `prog`・速さ `bar`・効果音を変える。落ち着いた話＝ゆっくり・低め、得する話＝明るい和音・少し速め、注意喚起＝低い響きを増やす。前日と同じ曲にしない。
+- 自宅写真が使えるネタを優先：吹き抜け、屋上、キッチン、照明、タイル・壁材、収納（ウォークインクローゼット）、洗面・ランドリー、階段、外構（ルーバー・植栽）、猫と暮らす家、掃除のしやすさ、後悔と対策、費用の考え方。知識系（税金・ローン）も、背景は家の写真で作る。
+- 「わが家の場合」と体験として語るのは可。ただしBOSSが言っていない事実（金額・メーカー名・広さ・住所・家族の年齢など）を作らない。体験談が必要なら一般論として書く。
+
+### `kit/h/` の写真（縦＝1160×2000、`pan_`＝横長・高さ2000）
+- LDK・吹き抜け：`fukinuke_day` `fukinuke_day2` `ldk_pro`★ `ldk_tall` `ldk_wide` `ldk_stairs` `ldk_stairs_low` `ldk_day` `ldk_low_p` `ldk_above` `above_p` `above_sofa`★ `above_stairs` `fromabove` `tvwall_up` `tv_low` `living_tv` `living_sofa` `living_sofa2` `stairs_view` ／ 横長 `pan_ldk_pro`★ `pan_ldk_day` `pan_ldk_day2` `pan_ldk_low` `pan_fukinuke_day` `pan_above` `pan_above_sofa`★ `pan_stairs_low` `pan_tv_day` `pan_tv_night` `pan_kitchen_living`★
+- キッチン・ダイニング：`kitchen_pro`★ `kitchen_day`★ `kitchen_front` `kitchen_table` `dining_low` `table` `ceiling_wood` `blue_tile`★ `tile` ／ `pan_kitchen_pro`★ `pan_kitchen_day`★ `pan_dining_low`
+- 天井ファン：`fan`★ `fan2`★
+- 階段・猫：`stairs` `cat`★
+- 屋上：`roof_pro`★（夜） `roof_day`★ `roof_sky` `roof_night` ／ `pan_roof_pro`★ `pan_roof_day`★ `pan_roof_night`
+- 水まわり・収納：`washroom_pro`★ `washroom` `washroom_mirror` `washroom_tile` `corridor` `laundry` `toilet` `wic`
+- 照明・小物・壁材：`pendant` `walllight` `clock` `clock_gold` `wall_angle` `tile_close` `tile_white` `tile_dark`
+- 外まわり：`ext_night`★（夜の外観） `sky`★（外壁と青空） `louver` `steps` `stripes` `door_shadow`（ルーバーの影） `olive`
+- ★＝プロ撮影で特にきれい。冒頭（0秒）は★か吹き抜けの写真を使う。
+- **載せない決まり**：車のナンバー、表札、近所の家がはっきり写る写真は入れていない。今後BOSSから写真が増えても、ナンバー・表札・住所が分かるもの・家族の顔写真がはっきり写るものは使わない（切り取るか、使わない）。
+
+### 予約ずみの動画がある日
+- `log/posts.md` の今日の行が「動画完成・未投稿」なら、新しく作らず、その動画（`videos/`）と `log/captions/YYYY-MM-DD.md` の投稿文で20:00に投稿する。
+- 毎回、投稿文は `log/captions/YYYY-MM-DD.md` に保存する。
+
 ## フォルダ
 | 場所 | 中身 |
 |---|---|
