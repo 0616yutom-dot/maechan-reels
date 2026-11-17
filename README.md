@@ -111,3 +111,15 @@ ffmpeg -y -loglevel error -i new_silent.mp4 -i new.wav -map 0:v -map 1:a -c:v co
   `timestamp, media_caption, media_views, media_reach, media_like_count, media_saved, media_shares, media_comments_count, media_reel_avg_watch_time, media_reel_skip_rate` と、`followers_count` を取る。
 - 見方：3秒で飛ばされる割合が高い→冒頭を変える／見られた秒数が短い→短く・切り替えを速く／シェア・保存が少ない→ネタを変える。
 - 気づきは `log/posts.md` の「学び」に1〜2行で書き足し、次のネタ選びと冒頭づくりに使う。
+
+## ★ストーリーズ（2026/11/17 BOSS指示。1日3回 8:00／12:00／18:00）
+- 目的：フォロワーを増やす・「活きているアカウント」に見せる。内容は大臣に一任。
+- 記録は `log/stories.md`。**毎回最初に読み、同じ日・同じ時間帯に「投稿ずみ」があれば投稿しない（二重投稿しない）**。直近と同じ写真・同じ文言を続けない。
+- 時間帯ごとの型：
+  - **8時＝家づくりメモ**（自宅写真＋ひとこと。一般的な考え方だけ。金額・制度・金利などの数字は出さない）
+  - **12時＝過去リールの再紹介**（`videos/` の動画をそのまま流す。直近の2本以外から順番に。本数が少ないうちは「わが家の写真」画像でもよい）
+  - **18時＝今夜20時のリール予告、または「わが家の写真」**（`log/posts.md` の今日の行にネタがあれば「今夜20時 公開」と予告。なければ写真＋場所の名前）
+- 画像の作り方：`python3 kit/story.py <写真名> <小見出し> <大見出し(｜で改行)> <本文(｜で改行)> stories/YYYY-MM-DD_HH.jpg [dark]`（縦1080×1920。大見出し1行9文字まで・本文1行18文字まで）。作ったら必ず Read で見て、文字切れ・読みにくさ・ナンバー／表札／近所の家／家族の顔の写り込みがないか確認。`ext_night` は近所の家が写るので使わない。
+- 投稿：画像を `stories/` に入れて push → `curl -sI` で 200 → Windsor `execute_action`：connector=`instagram`、account=`17841469026505231`、action=`create_story`、params=`{"image_url": 公開URL}`（動画は `{"video_url": …}`）。ストーリーズは投稿文・リンクを付けられない。
+- 失敗したら1回だけ再試行。だめなら記録に「失敗」と書いて終了（PushNotification で知らせる）。成功時は通知しない。
+- BOSSが言っていない自宅の事実（金額・メーカー名・広さ・住所）を作らない。誇大・断定は禁止。
