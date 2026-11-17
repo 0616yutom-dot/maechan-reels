@@ -1,0 +1,9 @@
+[
+ {"type":"cover","photo":"fukinuke_day","label":"MATERIAL TOUR","title":["わが家の","素材を公開"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"blue_tile","label":"01","title":["青いタイル"],"sub":"キッチンの奥の壁"},
+ {"type":"photo","photo":"ceiling_wood","label":"02","title":["木目の天井"],"sub":"キッチンの上だけ木目に"},
+ {"type":"photo","photo":"tvwall_up","label":"03","title":["リビングの壁"],"sub":"吹き抜けの上までタイル張り"},
+ {"type":"photo","photo":"washroom_tile","label":"04","title":["洗面の壁"],"sub":"凹凸のある白いタイル"},
+ {"type":"photo","photo":"pendant","label":"05","title":["ペンダントライト"],"sub":"壁にうつる光の模様"},
+ {"type":"cta","photo":"ldk_tall","title":["家づくりの相談、","無料で受けています"],"word":"相談"}
+]
