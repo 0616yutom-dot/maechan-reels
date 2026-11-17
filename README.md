@@ -123,3 +123,4 @@ ffmpeg -y -loglevel error -i new_silent.mp4 -i new.wav -map 0:v -map 1:a -c:v co
 - 投稿：画像を `stories/` に入れて push → `curl -sI` で 200 → Windsor `execute_action`：connector=`instagram`、account=`17841469026505231`、action=`create_story`、params=`{"image_url": 公開URL}`（動画は `{"video_url": …}`）。ストーリーズは投稿文・リンクを付けられない。
 - 失敗したら1回だけ再試行。だめなら記録に「失敗」と書いて終了（PushNotification で知らせる）。成功時は通知しない。
 - BOSSが言っていない自宅の事実（金額・メーカー名・広さ・住所）を作らない。誇大・断定は禁止。
+- **20時のリールもストーリーズに載せる**（2026/11/17 BOSS指示）：リールの自動作業が、投稿成功のあと同じ動画を `create_story`（`{"video_url": …}`）で載せ、`log/stories.md` に「20時」の行を足す。ストーリーズは1日4本（8時・12時・18時・20時すぎ）になる。
