@@ -6,3 +6,4 @@ kit/chk*
 kit/new*
 __pycache__/
 *.tmp.mp4
+kit/audio_new.py
