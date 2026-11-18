@@ -1,0 +1,8 @@
+[
+ {"type":"cover","photo":"ldk_above","label":"VIEW FROM 2F","title":["2階から見た","わが家"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"above_p","label":"01","title":["リビングとキッチン"],"sub":"2階から見下ろしたところ"},
+ {"type":"photo","photo":"above_sofa","label":"02","title":["ソファ"],"sub":"真上から見たところ"},
+ {"type":"photo","photo":"stairs_view","label":"03","title":["階段ごしのキッチン"],"sub":"階段の途中から"},
+ {"type":"photo","photo":"fromabove","label":"04","title":["天井のファン"],"sub":"吹き抜けのいちばん上"},
+ {"type":"text","photo":"pan_above","label":"QUESTION","title":["どの場所が","好きですか？"],"lines":["01〜04の番号を","DMで教えてください","@maechan_0616"]}
+]
