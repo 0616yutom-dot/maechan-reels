@@ -1,0 +1,9 @@
+[
+ {"type":"cover","photo":"roof_pro","dark":0.32,"label":"LIGHTING","title":["わが家の","あかり"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"washroom","label":"01","title":["洗面のあかり"],"sub":"鏡の上の間接照明"},
+ {"type":"photo","photo":"kitchen_pro","label":"02","title":["キッチンのあかり"],"sub":"木目の天井のダウンライト"},
+ {"type":"photo","photo":"toilet","label":"03","title":["トイレのあかり"],"sub":"壁に広がるペンダントライトの光"},
+ {"type":"photo","photo":"pan_tv_night","label":"04","title":["リビングのあかり"],"sub":"吹き抜けの上の間接照明"},
+ {"type":"photo","photo":"roof_night","label":"05","title":["屋上のあかり"],"sub":"軒下のダウンライト"},
+ {"type":"text","photo":"ldk_pro","label":"QUESTION","title":["あかりの色、","どっち派？"],"lines":["白っぽいあかり？","オレンジのあかり？","「白」か「オレンジ」とDMで"]}
+]
