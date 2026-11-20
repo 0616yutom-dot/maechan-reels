@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"ldk_day","dark":0.25,"label":"DAYTIME","title":["昼の","リビング"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"living_sofa","label":"01","title":["ソファ"],"sub":"テレビ側の壁と吹き抜けの梁"},
+ {"type":"photo","photo":"fukinuke_day2","label":"02","title":["吹き抜け"],"sub":"天井のファンと間接照明"},
+ {"type":"photo","photo":"ldk_wide","label":"03","title":["ダイニングと階段"],"sub":"リビングから見たところ"},
+ {"type":"text","photo":"living_sofa2","label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["家のお金の話をします","よければ見てください"]}
+]
