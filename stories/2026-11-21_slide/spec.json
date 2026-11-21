@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"kitchen_front","dark":0.25,"label":"KITCHEN","title":["わが家の","キッチンまわり"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"kitchen_table","label":"01","title":["シンクとコンロ"],"sub":"キッチンからリビングを見たところ"},
+ {"type":"photo","photo":"table","label":"02","title":["ダイニングテーブル"],"sub":"ベンチとチェア"},
+ {"type":"photo","photo":"ceiling_wood","label":"03","title":["木目の天井"],"sub":"キッチンの上の間接照明"},
+ {"type":"text","photo":"blue_tile","label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["家賃と持ち家の話をします","よければ見てください"]}
+]

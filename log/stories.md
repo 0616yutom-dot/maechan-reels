@@ -18,6 +18,7 @@
 | 2026-11-20 | 18時 | わが家の写真 | stairs／「階段」 stories/2026-11-20_18.jpg（今日のリールの行がまだ無いため予告ではなく写真） | 投稿ずみ |
 | 2026-11-20 | 20時 | 今夜のリール | videos/2026-11-20_kinri.mp4 | 投稿ずみ |
 | 2026-11-21 | 8時 | 家づくりメモ | living_tv／「コンセントは家具より先に」置きたい家具を先に書き出すと位置を決めやすい stories/2026-11-21_08.jpg | 投稿ずみ |
+| 2026-11-21 | 12時 | 写真スライド | テーマ「わが家のキッチンまわり」5枚（表紙 kitchen_front／kitchen_table／table／ceiling_wood／最後は予告「今夜20時 リール公開・家賃と持ち家の話をします」blue_tile） stories/2026-11-21_slide/ | 投稿予約ずみ |
 
 ## 家づくりメモのネタ候補（使ったら消す。足してよい）
 - 照明は明るさより「どこを照らすか」／写真 pendant, walllight
@@ -40,7 +41,6 @@
 - 屋上の一日（昼・夕方・夜）／写真 roof_day, roof_sky, roof_pro, roof_night
 - 光と影（ルーバー・しま模様の影）／写真 louver, stripes, steps, door_shadow
 - 水まわりツアー（洗面・ランドリー・トイレ）／写真 washroom_pro, washroom_mirror, laundry, toilet
-- キッチンまわり／写真 kitchen_pro, kitchen_front, kitchen_table, kitchen_day, table
 - わが家の小物（時計・オリーブ・ファン）／写真 clock_gold, olive, fan, pendant
 - 外まわり（外壁・空・ルーバー）／写真 sky, wall_angle, louver, olive
 - 冬のわが家（朝の光・あたたかい色のあかり）／写真 fukinuke_day, ldk_day, walllight, pendant, living_sofa（11/18 追加・季節ネタ）
@@ -48,7 +48,8 @@
 - 最後の1枚は「DMで教えて」の問いをやめて、「今夜20時のリールの予告」にする（問いは2回とも返信0。11/20 追加）
 - 冬じたく（あたたかい色のあかり・ファン・厚手のカーテンまわり）／写真 fan, fan2, pendant, living_sofa, ldk_day（11/20 追加・季節ネタ）
 - 年末の大そうじ前に見る わが家の収納と水まわり／写真 wic, laundry, washroom_pro, corridor（11/21 追加・季節ネタ）
-- 使ったテーマ：わが家の素材を公開（11/17）／2階から見たわが家（11/18）／わが家のあかり（11/19）／昼のリビング（11/20）
+- 使ったテーマ：わが家の素材を公開（11/17）／2階から見たわが家（11/18）／わが家のあかり（11/19）／昼のリビング（11/20）／わが家のキッチンまわり（11/21）
+- 注意：kitchen_day と kitchen_pro はテレビ台の上に写真立てが写るので、大きく使うときは気をつける（11/21 確認）
 - 注意：walllight は器具のラベル（メーカー名）が読めるので、1枚もので大きく使わない（11/18 確認）
 - 注意：above_stairs は窓の外に近所の家と車がはっきり写るので、ストーリーズ・スライドには使わない（11/18 確認）
 
