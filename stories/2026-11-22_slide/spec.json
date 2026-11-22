@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"living_sofa2","dark":0.25,"label":"SUNDAY","title":["日曜の午後","くつろぐ場所"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"above_sofa","label":"01","title":["リビングのソファ"],"sub":"2階から見たところ"},
+ {"type":"photo","photo":"cat","label":"02","title":["階段"],"sub":"木の踏み板と、ねこ"},
+ {"type":"photo","photo":"roof_day","label":"03","title":["屋上"],"sub":"テーブルとチェア"},
+ {"type":"text","photo":"pan_ldk_low","label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["親からの家のお金の話をします","よければ見てください"]}
+]
