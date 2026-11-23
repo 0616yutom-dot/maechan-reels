@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"wall_angle","dark":0.25,"label":"MATERIAL","title":["タイルと壁を","近くで見る"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"tile","label":"01","title":["キッチンの壁"],"sub":"ツヤのある細長いタイル"},
+ {"type":"photo","photo":"tile_dark","label":"02","title":["濃い色のタイル"],"sub":"大きさのちがう四角"},
+ {"type":"photo","photo":"tile_white","label":"03","title":["白いタイル"],"sub":"波のような模様"},
+ {"type":"text","photo":"tile_close","label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["冬の朝の窓の話をします","よければ見てください"]}
+]
