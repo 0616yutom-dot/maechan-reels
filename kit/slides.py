@@ -10,7 +10,7 @@
 ]
 - 最後に story を付けると、ストーリーズ用の縦長（1080×1920）で作る（文字は上下の操作部分を避けた位置に出る）。
 - cover=表紙（大きな見出し。最後の行が金色）／photo=写真が主役で下に短い名前／text=写真を暗くして箇条書き／cta=最後の案内（DMの合言葉）
-- yoff=写真の上下の切り取り位置（0=上、1=下。既定0.45）。"dark":0.2 などで写真を暗くできる。
+- yoff=写真の上下の切り取り位置（0=上、1=下。既定0.45）。xoff=左右の切り取り位置（0=左、1=右。既定0.5）。横長の pan_ 写真は xoff を 0.1／0.5／0.9 と変えると、1枚から別の場面を2〜3つ切り出せる。"dark":0.2 などで写真を暗くできる。
 - 見出しは1行10文字まで、sub と lines は1行20文字まで（長いとエラーで止まる）。枚数は2〜10枚。
 """
 import sys, json, os
@@ -23,13 +23,13 @@ CY = 285 if STORY else 0      # 中央の案内（cta）を動かす量
 GR = 1100 if STORY else 560    # 下の影の高さ
 GOLD = (243, 223, 160); CREAM = (241, 232, 208); NAVY = (16, 28, 45)
 def F(s): return ImageFont.truetype(FP, s, index=0)
-def base(name, yoff=0.45, dark=0.0):
+def base(name, yoff=0.45, dark=0.0, xoff=0.5):
     im = Image.open(f"kit/h/{name}.jpg").convert("RGB")
     h = round(im.height * W / im.width)
     if h >= H:
         im = im.resize((W, h), Image.LANCZOS); y = round((h - H) * yoff); im = im.crop((0, y, W, y + H))
     else:
-        w = round(im.width * H / im.height); im = im.resize((w, H), Image.LANCZOS); x = (w - W) // 2; im = im.crop((x, 0, x + W, H))
+        w = round(im.width * H / im.height); im = im.resize((w, H), Image.LANCZOS); x = round((w - W) * xoff); im = im.crop((x, 0, x + W, H))
     ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(ov)
     da = int(255 * dark)   # 全体の暗さ。下の影はそれより濃い所だけ重ねる
     if dark: d.rectangle([0, 0, W, H], fill=NAVY + (da,))
@@ -43,26 +43,26 @@ def c(d, y, t, f, fill):
 def make(s):
     t = s["type"]; title = s.get("title", [])
     if t == "cover":
-        im = base(s["photo"], s.get("yoff", 0.45), s.get("dark", 0.18)); d = ImageDraw.Draw(im)
+        im = base(s["photo"], s.get("yoff", 0.45), s.get("dark", 0.18), s.get("xoff", 0.5)); d = ImageDraw.Draw(im)
         y = 1230 + DY - len(title) * 120 - 70
         c(d, y, s.get("label", ""), F(36), GOLD); y += 62
         for i, x in enumerate(title):
             c(d, y, x, F(96), GOLD if i == len(title) - 1 and len(title) > 1 else CREAM); y += 120
         if s.get("sub"): c(d, 1250 + DY, s["sub"], F(36), CREAM)
     elif t == "photo":
-        im = base(s["photo"], s.get("yoff", 0.45), s.get("dark", 0)); d = ImageDraw.Draw(im)
+        im = base(s["photo"], s.get("yoff", 0.45), s.get("dark", 0), s.get("xoff", 0.5)); d = ImageDraw.Draw(im)
         c(d, 1075 + DY, s.get("label", ""), F(34), GOLD); d.line([(W / 2 - 40, 1128 + DY), (W / 2 + 40, 1128 + DY)], fill=GOLD, width=2)
         c(d, 1145 + DY, title[0], F(68), CREAM)
         if s.get("sub"): c(d, 1245 + DY, s["sub"], F(34), CREAM)
     elif t == "text":
-        im = base(s["photo"], s.get("yoff", 0.45), s.get("dark", 0.72)); d = ImageDraw.Draw(im)
+        im = base(s["photo"], s.get("yoff", 0.45), s.get("dark", 0.72), s.get("xoff", 0.5)); d = ImageDraw.Draw(im)
         lines = s.get("lines", []); y = (H - (70 + len(title) * 105 + 50 + len(lines) * 84)) // 2
         c(d, y, s.get("label", ""), F(36), GOLD); y += 70
         for x in title: c(d, y, x, F(84), GOLD); y += 105
         y += 50
         for x in lines: c(d, y, x, F(50), CREAM); y += 84
     elif t == "cta":
-        im = base(s["photo"], s.get("yoff", 0.4), s.get("dark", 0.72)); d = ImageDraw.Draw(im)
+        im = base(s["photo"], s.get("yoff", 0.4), s.get("dark", 0.72), s.get("xoff", 0.5)); d = ImageDraw.Draw(im)
         y = 380 + CY
         for i, x in enumerate(title):
             c(d, y, x, F(84), GOLD if i == len(title) - 1 else CREAM); y += 110
