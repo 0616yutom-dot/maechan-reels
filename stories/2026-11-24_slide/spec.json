@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"sky","dark":0.2,"label":"ROOFTOP","title":["屋上の","昼と夜"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"pan_roof_day","xoff":0.56,"label":"01","title":["昼の屋上"],"sub":"テーブルといす"},
+ {"type":"photo","photo":"pan_roof_pro","xoff":0.5,"label":"02","title":["夕方の屋上"],"sub":"木目の天井とあかり"},
+ {"type":"photo","photo":"pan_roof_night","xoff":1.0,"label":"03","title":["夜の屋上"],"sub":"ウッドデッキ"},
+ {"type":"text","photo":"pan_roof_day","xoff":1.0,"dark":0.4,"label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["家賃とローンの話をします","よければ見てください"]}
+]
