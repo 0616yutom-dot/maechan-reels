@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"louver","dark":0.2,"label":"LIGHT & SHADOW","title":["わが家の","光と影"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"stripes","label":"01","title":["外の壁"],"sub":"しま模様の影"},
+ {"type":"photo","photo":"steps","label":"02","title":["外の階段"],"sub":"タイルに落ちる影"},
+ {"type":"photo","photo":"olive","label":"03","title":["オリーブ"],"sub":"グレーの壁の前"},
+ {"type":"text","photo":"stripes","yoff":1.0,"dark":0.45,"label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["新居の家電の話をします","よければ見てください"]}
+]

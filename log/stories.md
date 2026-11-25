@@ -34,6 +34,7 @@
 | 2026-11-24 | 18時 | 今夜のリール予告 | ldk_stairs／「今夜20時 公開」家賃と同じ返済額なら大丈夫？（答えは今夜のリールで。数字は出さない） stories/2026-11-24_18.jpg（11/24の方針どおり、リールの行が無くても予告） | 投稿ずみ |
 | 2026-11-24 | 20時 | 今夜のリール | videos/2026-11-24_yachin-hensai.mp4 | 投稿ずみ |
 | 2026-11-25 | 8時 | 家づくりメモ | door_shadow／「帰る時間の明るさを考える」冬は日が短い季節・玄関と廊下のあかりは夕方に確かめておきたい stories/2026-11-25_08.jpg | 投稿ずみ |
+| 2026-11-25 | 12時 | 写真スライド | テーマ「わが家の光と影」5枚（表紙 louver／stripes／steps／olive／最後は予告「今夜20時 リール公開・新居の家電の話をします」stripes（下寄りの切り出し）） stories/2026-11-25_slide/ | 投稿予約ずみ |
 
 ## 家づくりメモのネタ候補（使ったら消す。足してよい）
 - 「家電は、引っ越しの日から逆算」大きな家電は届くまで日にちがかかることも。置く場所の幅と、通り道の幅を先に測る／写真 kitchen_day, washroom_mirror（11/25 追加。数字は出さない）
@@ -59,15 +60,14 @@
 ## スライドで使った写真（12時の写真スライド用。2026/11/23 BOSS指示「写真を変えてバリエーションを増やして」）
 - 決まり：写真3枚のうち2枚以上は「まだスライドで使っていない写真」にする。表紙も、直近7日のスライドで使った写真は使わない。使ったらこの表に日付を書き足す。
 - 横長の `pan_` 写真は、spec.json の "xoff"（0=左・0.5=真ん中・1=右）を変えると、1枚から別の場面を2〜3つ切り出せる。同じ pan_ 写真を使うときは前回と違う xoff にする（例「pan_ldk_pro@0.1」と書く）。
-- まだ使っていない写真（11/24 時点）：clock clock_gold corridor dining_low door_shadow fan fan2 kitchen_day laundry ldk_low_p ldk_stairs ldk_stairs_low living_tv louver olive pan_above_sofa pan_dining_low pan_fukinuke_day pan_kitchen_day pan_kitchen_living pan_kitchen_pro pan_ldk_day pan_ldk_day2 pan_ldk_pro pan_stairs_low pan_tv_day roof_sky stairs steps stripes tv_low walllight washroom_mirror washroom_pro wic
-- 使った写真（日付）：above_p（11/18） ／ above_sofa（11/18・11/22） ／ blue_tile（11/17・11/21） ／ cat（11/22） ／ ceiling_wood（11/17・11/21） ／ fromabove（11/18） ／ fukinuke_day（11/17） ／ fukinuke_day2（11/20） ／ kitchen_front（11/21） ／ kitchen_pro（11/19） ／ kitchen_table（11/21） ／ ldk_above（11/18） ／ ldk_day（11/20） ／ ldk_pro（11/19） ／ ldk_tall（11/17） ／ ldk_wide（11/20） ／ living_sofa（11/20） ／ living_sofa2（11/20・11/22） ／ pan_above（11/18） ／ pan_ldk_low（11/22） ／ pan_tv_night（11/19） ／ pendant（11/17） ／ roof_day（11/22） ／ roof_night（11/19） ／ roof_pro（11/19） ／ stairs_view（11/18） ／ table（11/21） ／ toilet（11/19） ／ tvwall_up（11/17） ／ washroom（11/19） ／ washroom_tile（11/17） ／ wall_angle（11/23） ／ tile（11/23） ／ tile_dark（11/23） ／ tile_white（11/23） ／ tile_close（11/23） ／ sky（11/24） ／ pan_roof_day@0.56・@1.0（11/24） ／ pan_roof_pro@0.5（11/24） ／ pan_roof_night@1.0（11/24）
+- まだ使っていない写真（11/25 時点）：clock clock_gold corridor dining_low door_shadow fan fan2 kitchen_day laundry ldk_low_p ldk_stairs ldk_stairs_low living_tv pan_above_sofa pan_dining_low pan_fukinuke_day pan_kitchen_day pan_kitchen_living pan_kitchen_pro pan_ldk_day pan_ldk_day2 pan_ldk_pro pan_stairs_low pan_tv_day roof_sky stairs tv_low walllight washroom_mirror washroom_pro wic
+- 使った写真（日付）：above_p（11/18） ／ above_sofa（11/18・11/22） ／ blue_tile（11/17・11/21） ／ cat（11/22） ／ ceiling_wood（11/17・11/21） ／ fromabove（11/18） ／ fukinuke_day（11/17） ／ fukinuke_day2（11/20） ／ kitchen_front（11/21） ／ kitchen_pro（11/19） ／ kitchen_table（11/21） ／ ldk_above（11/18） ／ ldk_day（11/20） ／ ldk_pro（11/19） ／ ldk_tall（11/17） ／ ldk_wide（11/20） ／ living_sofa（11/20） ／ living_sofa2（11/20・11/22） ／ pan_above（11/18） ／ pan_ldk_low（11/22） ／ pan_tv_night（11/19） ／ pendant（11/17） ／ roof_day（11/22） ／ roof_night（11/19） ／ roof_pro（11/19） ／ stairs_view（11/18） ／ table（11/21） ／ toilet（11/19） ／ tvwall_up（11/17） ／ washroom（11/19） ／ washroom_tile（11/17） ／ wall_angle（11/23） ／ tile（11/23） ／ tile_dark（11/23） ／ tile_white（11/23） ／ tile_close（11/23） ／ sky（11/24） ／ pan_roof_day@0.56・@1.0（11/24） ／ pan_roof_pro@0.5（11/24） ／ pan_roof_night@1.0（11/24） ／ louver（11/25） ／ stripes（11/25） ／ steps（11/25） ／ olive（11/25）
 - 使わない写真：above_stairs・ext_night（近所の家・車が写る）。pan_kitchen_living の右側（xoff 0.7以上）は窓の外に近所の建物が写るので使わない（11/23 確認）。
 - BOSSから新しい写真が届いたら `kit/h/` に足し（縦は1160×2000、横長は高さ2000で `pan_` を付ける）、README の写真一覧とこの「まだ使っていない写真」に書き足す。
 
 ## スライドのテーマ候補（12時の写真スライド用。使ったら消す。足してよい。毎回テーマも写真も変える）
 - 階段のある景色／写真 stairs, stairs_view, ldk_stairs, ldk_stairs_low, cat
 - 屋上の一日（昼・夕方・夜）／写真 roof_day, roof_sky, roof_pro, roof_night
-- 光と影（ルーバー・しま模様の影）／写真 louver, stripes, steps, door_shadow
 - 水まわりツアー（洗面・ランドリー・トイレ）／写真 washroom_pro, washroom_mirror, laundry, toilet
 - わが家の小物（時計・オリーブ・ファン）／写真 clock_gold, olive, fan, pendant
 - 外まわり（外壁・空・ルーバー）／写真 sky, wall_angle, louver, olive
@@ -78,7 +78,7 @@
 - 年末の大そうじ前に見る わが家の収納と水まわり／写真 wic, laundry, washroom_pro, corridor（11/21 追加・季節ネタ）
 - パノラマで見るわが家（横長写真を左・右で切り出す）／写真 pan_ldk_pro, pan_ldk_day2, pan_kitchen_pro, pan_dining_low（11/23 追加）
 - 冬の夜のリビング（テレビまわり・あかり）／写真 pan_tv_day, tv_low, living_tv, clock_gold（11/23 追加）
-- 使ったテーマ：わが家の素材を公開（11/17）／2階から見たわが家（11/18）／わが家のあかり（11/19）／昼のリビング（11/20）／わが家のキッチンまわり（11/21）／日曜の午後 くつろぐ場所（11/22）／タイルと壁を近くで見る（11/23）／屋上の昼と夜（11/24）
+- 使ったテーマ：わが家の素材を公開（11/17）／2階から見たわが家（11/18）／わが家のあかり（11/19）／昼のリビング（11/20）／わが家のキッチンまわり（11/21）／日曜の午後 くつろぐ場所（11/22）／タイルと壁を近くで見る（11/23）／屋上の昼と夜（11/24）／わが家の光と影（11/25）
 - 注意：kitchen_day と kitchen_pro はテレビ台の上に写真立てが写るので、大きく使うときは気をつける（11/21 確認）
 - 注意：walllight は器具のラベル（メーカー名）が読めるので、1枚もので大きく使わない（11/18 確認）
 - 注意：corridor は玄関の廊下ではなく「洗面からランドリー・浴室へ続く通路」の写真。白い壁が明るく、1枚ものでは見出しが読みにくい（11/25 確認）
