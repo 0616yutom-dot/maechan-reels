@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"washroom_pro","dark":0.2,"label":"ROOM TOUR 11.26","title":["いい風呂の日に","わが家の水まわり"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"washroom_mirror","label":"01","title":["洗面台"],"sub":"鏡とカウンター"},
+ {"type":"photo","photo":"laundry","label":"02","title":["ランドリー"],"sub":"洗面のとなり"},
+ {"type":"photo","photo":"corridor","label":"03","title":["通路"],"sub":"洗面からランドリーへ"},
+ {"type":"text","photo":"washroom_tile","dark":0.5,"label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["冬のお風呂の話をします","よければ見てください"]}
+]
