@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"stairs","dark":0.2,"label":"ROOM TOUR 11.27","title":["階段のある","わが家の景色"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"ldk_stairs","label":"01","title":["リビングと階段"],"sub":"リビングから見たところ"},
+ {"type":"photo","photo":"ldk_stairs_low","label":"02","title":["階段と吹き抜け"],"sub":"下から見上げたところ"},
+ {"type":"photo","photo":"pan_stairs_low","xoff":0.08,"label":"03","title":["階段"],"sub":"リビングの奥"},
+ {"type":"text","photo":"stairs_view","dark":0.5,"label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["毎月かかるお金の話をします","よければ見てください"]}
+]
