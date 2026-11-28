@@ -1,0 +1,7 @@
+[
+ {"type":"cover","photo":"pan_tv_day","xoff":0.5,"dark":0.2,"label":"ROOM TOUR 11.28","title":["冬の土曜日","長くいる場所"],"sub":"タップして見てください →"},
+ {"type":"photo","photo":"tv_low","label":"01","title":["テレビまわり"],"sub":"リビング"},
+ {"type":"photo","photo":"living_tv","label":"02","title":["リビング"],"sub":"テレビとソファ"},
+ {"type":"photo","photo":"clock_gold","label":"03","title":["時計"],"sub":"リビングの壁"},
+ {"type":"text","photo":"dining_low","dark":0.5,"label":"TONIGHT","title":["今夜20時","リール公開"],"lines":["家賃と同じ返済なら、","いくら借りられる？","よければ見てください"]}
+]
